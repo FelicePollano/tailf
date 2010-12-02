@@ -17,7 +17,9 @@ namespace TestTailF
             while (true)
             {
                 var lg = LogManager.GetLogger(typeof(Program));
-                lg.Info("Message " + i++);
+                lg.Info("This is a message " + i++);
+                lg.Error("This is an error " + i++);
+                lg.Warn("This is a warning " + i++);
                 Thread.Sleep(10);
             }
         }
