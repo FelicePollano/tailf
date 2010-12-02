@@ -125,8 +125,9 @@ namespace Tailf
 
                     }
                 }
+                prevLen = fi.Length;
             }
-            prevLen = fi.Length;
+            
         }
         public event EventHandler<TailEventArgs> Changed;
         private void MakeTail(int nLines,string path)
