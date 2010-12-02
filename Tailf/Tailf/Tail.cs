@@ -54,10 +54,11 @@ namespace Tailf
             while (!requestForExit)
             {
                 fw_Changed();
-                Thread.Sleep(100);
+                Thread.Sleep(pollInterval);
             }
             me.Set();
         }
+        static readonly int pollInterval = 100;
         static readonly int bufSize = 4096;
         string previous = string.Empty;
         void fw_Changed()
